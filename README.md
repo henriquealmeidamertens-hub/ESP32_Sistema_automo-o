@@ -23,50 +23,48 @@ Projeto desenvolvido como um **Sistema Ciberfísico de Controle de Acesso** base
 
 ---
 
-## 🛠️ Componentes Utilizados
+## 🧩 Componentes do Sistema
 
 | Componente | Função |
 | :--- | :--- |
 | **ESP32 Dev Module** | Processamento central, controlo de GPIO, rádio Wi-Fi e Servidor HTTP. |
 | **Leitor RFID RC522** | Leitura sem fios da credencial do utilizador |
-| **Tag RFID (13.56 MHz)** | Credencial de acesso cadastrada (`F1 49 27 66`)|
-| **Módulo Relé 5V** | Interface de acionamento do circuito de potência da fechadura|
+| **Tag RFID (13.56 MHz)** | Credencial de acesso cadastrada (`F1 49 27 66`) |
+| **Módulo Relé 5V** | Interface de acionamento do circuito de potência da fechadura |
 | **Mini Fechadura Solenoide 12V** | Atuador elétrico/mecânico de trancamento |
 | **Sensor Magnético (Reed Switch)** | Deteção do alinhamento da porta física (Aberta/Fechada) |
 | **LED Verde** | Sinalização visual de Acesso Autorizado (GPIO 2) |
 | **LED Vermelho** | Sinalização visual de Acesso Negado / Alertas (GPIO 22) |
 | **Fonte Externa 12V** | Alimentação dedicada para a fechadura solenoide. |
-| **Protoboard e Jumpers** | Interligação dos sinais de baixa tensão|
+| **Protoboard e Jumpers** | Interligação dos sinais de baixa tensão |
 
 ---
 
 ## 🔌 Mapeamento de Pinos (Pinout)
 
+| Componente / Sinal | Pino ESP32 (GPIO) |
+| :--- | :--- |
+| **RC522 RST** | GPIO 4 |
+| **RC522 SDA / SS** | GPIO 5 |
+| **RC522 SCK** | GPIO 18 |
+| **RC522 MISO** | GPIO 19 |
+| **RC522 MOSI** | GPIO 23 |
+| **RC522 VCC / GND** | 3V3 / GND |
+| **LED Verde** | GPIO 2 |
+| **LED Vermelho** | GPIO 22 |
+| **Sensor Magnético** | GPIO 15 |
+| **Módulo Relé (IN)** | GPIO 21 |
 
-+---------------------+--------------------+
-| Componente / Sinal  | Pino ESP32 (GPIO)  |
-+---------------------+--------------------+
-| RC522 RST           | GPIO 4             |
-| RC522 SDA / SS      | GPIO 5             |
-| RC522 SCK           | GPIO 18            |
-| RC522 MISO          | GPIO 19            |
-| RC522 MOSI          | GPIO 23            |
-| RC522 VCC / GND     | 3V3 / GND          |
-| LED Verde           | GPIO 2             |
-| LED Vermelho        | GPIO 22            |
-| Sensor Magnético    | GPIO 15   |
-| Módulo Relé (IN)    | GPIO 21            |
-+---------------------+--------------------+
+---
 
-## Aplicação nas camadas do Modelo TCP/IP
-+---------------------+-------------------------------------------------------+
-| Camada TCP/IP       | Aplicação no Projeto                                  |
-+---------------------+-------------------------------------------------------+
-| Aplicação           | Interface Web servida via HTTP (WebServer.h)          |
-| Transporte          | Protocolo TCP na Porta 80                             |
-| Internet            | Endereço IPv4 atribuído na rede (Ex: 192.168.4.1)     |
-| Acesso à Rede       | Conexão sem fios via Wi-Fi 802.11 b/g/n               |
-+---------------------+-------------------------------------------------------+
+## 🌐 Aplicação nas Camadas do Modelo TCP/IP
+
+| Camada TCP/IP | Aplicação no Projeto |
+| :--- | :--- |
+| **Aplicação** | Interface Web servida via HTTP
+| **Transporte** | Protocolo TCP na Porta 80 |
+| **Internet** | Endereço IPv4 atribuído na rede (Ex: `192.168.4.1`) |
+| **Acesso à Rede** | Conexão sem fios via Wi-Fi 
 
 ## TESTES E VALIDAÇÃO DA REDE
  ## Teste de alcance / conectividade (PING) - `ping 192.168.4.1` - Confirma a comunicação do computador/celular com o ESP 

@@ -15,9 +15,9 @@ Projeto desenvolvido como um **Sistema Ciberfísico de Controle de Acesso** base
 
 ## 🚀 Funcionalidades
 
-- **Identificação RFID:** Leitura de tags de 13.56 MHz com o módulo MFRC522[cite: 1, 14]. Credencial autorizada padrão: `F1 49 27 66`[cite: 1, 14].
-- **Modo Access Point (AP) / Wi-Fi:** Cria a sua própria rede sem fios (`Trabalho_ESP32`) para acesso direto no endereço IP `192.168.4.1`[cite: 1, 14].
-- **Servidor Web Incorporado (Porta 80):** Interface desenvolvida em HTML/CSS/JS para trancar, destrancar e monitorizar os componentes em tempo real via navegador[cite: 1, 14].
+- **Identificação RFID:** Leitura de tags de 13.56 MHz com o módulo MFRC522[cite: 1, 14]. Credencial autorizada padrão: `F1 49 27 66
+- **Modo Access Point (AP) / Wi-Fi:** Cria a sua própria rede sem fios (`Trabalho_ESP32`) para acesso direto no endereço IP `192.168.4.1`
+- **Servidor Web Incorporado (Porta 80):** Interface desenvolvida em HTML/CSS/JS para trancar, destrancar e monitorizar os componentes em tempo real via navegador
 - **Logs Persistentes em Flash (SPIFFS):** Histórico gravado no chip de memória Flash categorizado em `[INFO]`, `[AVISO]` e `[ERRO]`, contendo carimbo de data/hora (Fuso de Brasília) e IP do cliente.
 - **Deteção de Intrusão / Alerta:** Gera alerta de segurança caso a porta seja aberta fisicamente sem autorização prévia.
 
@@ -27,16 +27,16 @@ Projeto desenvolvido como um **Sistema Ciberfísico de Controle de Acesso** base
 
 | Componente | Função |
 | :--- | :--- |
-| **ESP32 Dev Module** | Processamento central, controlo de GPIO, rádio Wi-Fi e Servidor HTTP[cite: 1, 14]. |
-| **Leitor RFID RC522** | Leitura sem fios da credencial do utilizador[cite: 1, 14]. |
-| **Tag RFID (13.56 MHz)** | Credencial de acesso cadastrada (`F1 49 27 66`)[cite: 1, 14]. |
-| **Módulo Relé 5V** | Interface de acionamento do circuito de potência da fechadura[cite: 1, 14]. |
-| **Mini Fechadura Solenoide 12V** | Atuador elétrico/mecânico de trancamento[cite: 1, 14]. |
-| **Sensor Magnético (Reed Switch)** | Deteção do alinhamento da porta física (Aberta/Fechada)[cite: 1, 14]. |
-| **LED Verde** | Sinalização visual de Acesso Autorizado (GPIO 2)[cite: 1, 14]. |
-| **LED Vermelho** | Sinalização visual de Acesso Negado / Alertas (GPIO 22)[cite: 1, 14]. |
-| **Fonte Externa 12V** | Alimentação dedicada para a fechadura solenoide[cite: 1, 14]. |
-| **Protoboard e Jumpers** | Interligação dos sinais de baixa tensão[cite: 1, 14]. |
+| **ESP32 Dev Module** | Processamento central, controlo de GPIO, rádio Wi-Fi e Servidor HTTP. |
+| **Leitor RFID RC522** | Leitura sem fios da credencial do utilizador |
+| **Tag RFID (13.56 MHz)** | Credencial de acesso cadastrada (`F1 49 27 66`)|
+| **Módulo Relé 5V** | Interface de acionamento do circuito de potência da fechadura|
+| **Mini Fechadura Solenoide 12V** | Atuador elétrico/mecânico de trancamento |
+| **Sensor Magnético (Reed Switch)** | Deteção do alinhamento da porta física (Aberta/Fechada) |
+| **LED Verde** | Sinalização visual de Acesso Autorizado (GPIO 2) |
+| **LED Vermelho** | Sinalização visual de Acesso Negado / Alertas (GPIO 22) |
+| **Fonte Externa 12V** | Alimentação dedicada para a fechadura solenoide. |
+| **Protoboard e Jumpers** | Interligação dos sinais de baixa tensão|
 
 ---
 

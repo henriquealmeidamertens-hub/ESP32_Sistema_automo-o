@@ -9,7 +9,7 @@ Projeto desenvolvido como um **Sistema Ciberfísico de Controle de Acesso** base
 * **Arthur Zanetti**
 * **Henrique Mertens**
 * **Vinicius Reis**
-* **Local:** Curitiba / 2026[cite: 1, 14]
+* **Local:** Curitiba / 2026
 
 ---
 
@@ -54,7 +54,7 @@ Projeto desenvolvido como um **Sistema Ciberfísico de Controle de Acesso** base
 | RC522 VCC / GND     | 3V3 / GND          |
 | LED Verde           | GPIO 2             |
 | LED Vermelho        | GPIO 22            |
-| Sensor Magnético    | GPIO 15 (PULLUP)   |
+| Sensor Magnético    | GPIO 15   |
 | Módulo Relé (IN)    | GPIO 21            |
 +---------------------+--------------------+
 
